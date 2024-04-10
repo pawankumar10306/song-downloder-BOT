@@ -10,12 +10,12 @@ async def search(song):
     data = await saavn.search_songs(song)
     for songDetail in data['data']:
         url = await saavn.get_song_direct_link(songDetail['url'])
-        audio = requests.get(url,timeout=30)
+        audio = requests.get(url)
         songdoc = {
             "title" : songDetail['title'],
             "image": songDetail['image'],
-            "album": songDetail['album'],
-            "url": audio.content,
+            "audio": audio.url,
+            "url": audio,
             "description": songDetail['description']
         }
         songlist.append(songdoc)
