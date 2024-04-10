@@ -1,3 +1,5 @@
 jiosaavn-python
 python-telegram-bot
 requests
+starlette
+uvicorn
