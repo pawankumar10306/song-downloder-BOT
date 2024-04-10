@@ -42,16 +42,6 @@ async def find(update,context):
     await update.message.reply_text("Thanks for Using Song Downloder")
 
 
-# logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
-# logging.getLogger("httpx").setLevel(logging.WARNING)
-# logger = logging.getLogger(__name__)
-# application = Application.builder().token(TOKEN).build()
-# application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, find))
-# application.run_polling(allowed_updates=Update.ALL_TYPES)
-
-# error on hosting telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-
-
 
 # Enable logging
 logging.basicConfig(
@@ -65,12 +55,6 @@ logger = logging.getLogger(__name__)
 # Define configuration constants
 URL = os.environ.get("RENDER_EXTERNAL_URL")  # NOTE: We need to tell telegram where to reach our service
 PORT = 8000
-# TOKEN = "<YOUR TOKEN>""  # nosec B105
-
-
-# async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-#     """Echo the user message."""
-#     await update.message.reply_text(update.message.text)
 
 
 async def main() -> None:
