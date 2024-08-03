@@ -1,5 +1,6 @@
-jiosaavn-python
-python-telegram-bot
+# jiosaavn-python
+# python-telegram-bot
 requests
-starlette
-uvicorn
+# starlette
+# uvicorn
+pyTelegramBotAPI
